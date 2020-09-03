@@ -1,0 +1,10 @@
+# PSRule options for QA
+
+binding:
+  targetName:
+  - RuleName
+  - FullName
+
+output:
+  culture:
+  - en-US
