@@ -18,4 +18,4 @@ jobs:
     - name: Run PSRule analysis (self)
       uses: Microsoft/ps-rule@main
       with:
-        source: src/PSRule.Rues.MSFT.OSS/
+        source: src/PSRule.Rules.MSFT.OSS/
