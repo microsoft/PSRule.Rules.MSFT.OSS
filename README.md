@@ -16,7 +16,35 @@ If you have any problems with the [PSRule][engine] engine, please check the proj
 
 ## Getting started
 
-**More to come**
+### Using with GitHub Actions
+
+1. See [Creating a workflow file](https://help.github.com/en/articles/configuring-a-workflow#creating-a-workflow-file).
+2. Reference `Microsoft/ps-rule@main` with `modules: 'PSRule.Rules.MSFT.OSS'`
+
+For example:
+
+```yaml
+#
+# Repository validation
+#
+name: Analyze
+on:
+- pull_request
+jobs:
+  analyze:
+    name: Analyze repository
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    # Run analysis against repository
+    - name: Run PSRule analysis
+      uses: Microsoft/ps-rule@main
+      with:
+        modules: 'PSRule.Rules.MSFT.OSS'
+```
 
 ## Changes and versioning
 
