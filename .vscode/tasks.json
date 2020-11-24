@@ -1,0 +1,61 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Test",
+            "type": "shell",
+            "detail": "Build and test module.",
+            "command": "Invoke-Build Test -AssertStyle Client",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$pester"
+            ],
+            "presentation": {
+                "clear": true,
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Build",
+            "detail": "Build module.",
+            "type": "shell",
+            "command": "Invoke-Build Build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "clear": true,
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Clean",
+            "type": "shell",
+            "detail": "Clean output directories.",
+            "command": "Invoke-Build Clean",
+            "problemMatcher": []
+        },
+        {
+            "label": "script-analyzer",
+            "type": "shell",
+            "command": "Invoke-Build Analyze",
+            "problemMatcher": [],
+            "presentation": {
+                "clear": true,
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Rule docs",
+            "detail": "Generate rule table of contents.",
+            "type": "shell",
+            "command": "Invoke-Build BuildRuleDocs",
+            "problemMatcher": []
+        }
+    ]
+}
