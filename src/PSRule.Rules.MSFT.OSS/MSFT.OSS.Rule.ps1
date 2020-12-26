@@ -13,7 +13,7 @@ Rule 'MSFT.OSS.Community' -Type 'PSRule.Data.RepositoryInfo' {
 }
 
 # Synopsis: Check for license in code files
-Rule 'MSFT.OSS.License' -Type '.cs', '.ps1', '.psd1', '.psm1' {
+Rule 'MSFT.OSS.License' -Type '.cs', '.ps1', '.psd1', '.psm1', '.ts', '.js', '.fs', '.go', '.php', '.cpp', '.h', '.r', '.py', '.sh', '.pl' {
     $Assert.FileHeader($TargetObject, 'FullName', @(
         'Copyright (c) Microsoft Corporation.'
         'Licensed under the MIT License.'
