@@ -4,6 +4,7 @@ input:
   pathIgnore:
   - '**/*.md'
   - '**/*.yaml'
+  - '**/.vscode/'
 
 output:
   culture:
