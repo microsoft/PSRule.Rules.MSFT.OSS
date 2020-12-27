@@ -5,25 +5,32 @@ This module is intended to be used by Microsoft repositories, and also serves as
 
 ![ci-badge]
 
-## Disclaimer
+## Support
 
-This project is open source and **not a supported product**.
+This project uses GitHub Issues to track bugs and feature requests.
+Please search the existing issues before filing new issues to avoid duplicates.
 
-If you are experiencing problems, have a feature request, or a question, please check for an [issue] on GitHub.
-If you do not see your problem captured, please file a new issue, and follow the provided template.
+- For new issues, file your bug or feature request as a new [Issue].
+- For help and questions about using this project, we have a Gitter room which you can join below.
+
+[![Join the chat][chat-badge]][chat]
 
 If you have any problems with the [PSRule][engine] engine, please check the project GitHub [issues](https://github.com/Microsoft/PSRule/issues) page instead.
+
+Support for this project/ product is limited to the resources listed above.
 
 ## Getting started
 
 ### Using with GitHub Actions
 
 1. See [Creating a workflow file](https://help.github.com/en/articles/configuring-a-workflow#creating-a-workflow-file).
-2. Reference `Microsoft/ps-rule@main` with `modules: 'PSRule.Rules.MSFT.OSS'`
+2. Reference `Microsoft/ps-rule` with `modules: 'PSRule.Rules.MSFT.OSS'`
 
 For example:
 
 ```yaml
+# Example: .github/workflows/analyze.yaml
+
 #
 # Repository validation
 #
@@ -80,3 +87,5 @@ This project is [licensed under the MIT License](LICENSE).
 [ci-badge]: https://dev.azure.com/bewhite/PSRule.Rules.MSFT.OSS/_apis/build/status/PSRule.Rules.MSFT.OSS-CI?branchName=main
 [module]: https://www.powershellgallery.com/packages/PSRule.Rules.MSFT.OSS
 [engine]: https://github.com/Microsoft/PSRule
+[chat]: https://gitter.im/PSRule/PSRule.Rules.MSFT.OSS?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+[chat-badge]: https://img.shields.io/static/v1.svg?label=chat&message=on%20gitter&color=informational&logo=gitter
