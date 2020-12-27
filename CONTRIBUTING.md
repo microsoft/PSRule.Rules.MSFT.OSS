@@ -64,7 +64,7 @@ Rule documentation requires the following annotations:
 
 ## Adding or improving rules
 
-- Rules are stored in `src/PSRule.Rules.MSFT.OSS/rules/`.
+- Rules are stored in `src/PSRule.Rules.MSFT.OSS/`.
 - Rule documentation in English is stored in `src/PSRule.Rules.MSFT.OSS/en/`.
   - Additional cultures can be added in a subdirectory under `src/PSRule.Rules.MSFT.OSS/`.
 - Use pre-conditions to limit the type of resource a rule applies to.
