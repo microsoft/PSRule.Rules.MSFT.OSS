@@ -232,7 +232,7 @@ task IntegrationTest ModuleDependencies, Pester, {
 # Synopsis: Run validation
 task Rules PSRule, {
     $assertParams = @{
-        Path = './.ps-rule/'
+        Path = @('./.ps-rule/', './src/')
         Style = $AssertStyle
         OutputFormat = 'NUnit3'
         ErrorAction = 'Stop'

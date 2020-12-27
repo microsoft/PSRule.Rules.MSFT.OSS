@@ -129,23 +129,23 @@ stages:
 
   - template: jobs/test.yaml
     parameters:
-      name: windows
-      displayName: 'PowerShell 5.1 - win2016'
-      imageName: 'vs2017-win2016'
+      name: windows_2019
+      displayName: 'PowerShell 7.1 - Windows 2019'
+      imageName: 'windows-2019'
 
   - template: jobs/testContainer.yaml
     parameters:
-      name: ps_7_ubuntu_18_04
-      displayName: 'PowerShell 7.0 - ubuntu-18.04'
-      imageName: mcr.microsoft.com/powershell
-      imageTag: 7.0.0-ubuntu-18.04
+      name: alpine_3_10
+      displayName: 'PowerShell 7.1 - alpine-3.10'
+      imageName: mcr.microsoft.com/powershell/test-deps
+      imageTag: alpine-3.10
 
   - template: jobs/testContainer.yaml
     parameters:
-      name: ps_6_ubuntu_18_04
-      displayName: 'PowerShell 6.2.4 - ubuntu-18.04'
+      name: ps_7_1_ubuntu_20_04
+      displayName: 'PowerShell 7.1 - ubuntu-20.04'
       imageName: mcr.microsoft.com/powershell
-      imageTag: 6.2.4-ubuntu-18.04
+      imageTag: 7.1.0-ubuntu-20.04
 
 # Release pipeline
 - stage: Release
@@ -180,15 +180,15 @@ stages:
       displayName: 'Publish module'
 
     # Update GitHub release
-    # - task: GitHubRelease@1
-    #   displayName: 'GitHub release'
-    #   inputs:
-    #     gitHubConnection: 'AzureDevOps-PSRule.Rules.MSFT.OSS'
-    #     repositoryName: '$(Build.Repository.Name)'
-    #     action: edit
-    #     tag: '$(Build.SourceBranchName)'
-    #     releaseNotesSource: inline
-    #     releaseNotesInline: 'See [change log](https://github.com/Microsoft/PSRule.Rules.MSFT.OSS/blob/main/CHANGELOG.md)'
-    #     assetUploadMode: replace
-    #     addChangeLog: false
-    #     isPreRelease: $(isPreRelease)
+    - task: GitHubRelease@1
+      displayName: 'GitHub release'
+      inputs:
+        gitHubConnection: 'AzureDevOps-PSRule.Rules.MSFT.OSS'
+        repositoryName: '$(Build.Repository.Name)'
+        action: edit
+        tag: '$(Build.SourceBranchName)'
+        releaseNotesSource: inline
+        releaseNotesInline: 'See [change log](https://github.com/Microsoft/PSRule.Rules.MSFT.OSS/blob/main/CHANGELOG.md)'
+        assetUploadMode: replace
+        addChangeLog: false
+        isPreRelease: $(isPreRelease)
