@@ -58,7 +58,6 @@ Before improving rule recommendations familiarize yourself with writing [rule ma
 
 Rule documentation requires the following annotations:
 
-- `severity`
 - `category`
 - `online version`
 

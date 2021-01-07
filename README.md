@@ -10,10 +10,8 @@ This module is intended to be used by Microsoft repositories, and also serves as
 This project uses GitHub Issues to track bugs and feature requests.
 Please search the existing issues before filing new issues to avoid duplicates.
 
-- For new issues, file your bug or feature request as a new [Issue].
-- For help and questions about using this project, we have a Gitter room which you can join below.
-
-[![Join the chat][chat-badge]][chat]
+- For new issues, file your bug or feature request as a new [issue].
+- For help, discussion, and support questions about using this project, join or start a [discussion].
 
 If you have any problems with the [PSRule][engine] engine, please check the project GitHub [issues](https://github.com/Microsoft/PSRule/issues) page instead.
 
@@ -23,8 +21,9 @@ Support for this project/ product is limited to the resources listed above.
 
 ### Using with GitHub Actions
 
-1. See [Creating a workflow file](https://help.github.com/en/articles/configuring-a-workflow#creating-a-workflow-file).
+1. See [Creating a workflow file][create-workflow].
 2. Reference `Microsoft/ps-rule` with `modules: 'PSRule.Rules.MSFT.OSS'`
+3. Optionally, set option `prerelease: true` to use a pre-release version.
 
 For example:
 
@@ -51,7 +50,15 @@ jobs:
       uses: Microsoft/ps-rule@main
       with:
         modules: 'PSRule.Rules.MSFT.OSS'
+        prerelease: true
 ```
+
+## Manual install
+
+This project is designed to be run through a continuous integration (CI) pipeline using GitHub Actions.
+
+Additionally, this module can be manually installed from the [PowerShell Gallery][module].
+For manual installation see [instructions][install].
 
 ## Changes and versioning
 
@@ -83,9 +90,9 @@ or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any addi
 This project is [licensed under the MIT License](LICENSE).
 
 [issue]: https://github.com/Microsoft/PSRule.Rules.MSFT.OSS/issues
-[install]: docs/scenarios/install-instructions.md
+[discussion]: https://github.com/microsoft/PSRule.Rules.MSFT.OSS/discussions
+[install]: docs/install-instructions.md
 [ci-badge]: https://dev.azure.com/bewhite/PSRule.Rules.MSFT.OSS/_apis/build/status/PSRule.Rules.MSFT.OSS-CI?branchName=main
 [module]: https://www.powershellgallery.com/packages/PSRule.Rules.MSFT.OSS
 [engine]: https://github.com/Microsoft/PSRule
-[chat]: https://gitter.im/PSRule/PSRule.Rules.MSFT.OSS?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
-[chat-badge]: https://img.shields.io/static/v1.svg?label=chat&message=on%20gitter&color=informational&logo=gitter
+[create-workflow]: https://help.github.com/en/articles/configuring-a-workflow#creating-a-workflow-file
