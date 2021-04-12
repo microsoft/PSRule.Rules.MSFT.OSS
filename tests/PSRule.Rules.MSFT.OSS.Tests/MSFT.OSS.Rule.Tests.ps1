@@ -19,7 +19,6 @@ if ($Env:SYSTEM_DEBUG -eq 'true') {
 # Setup tests paths
 $rootPath = $PWD;
 Import-Module (Join-Path -Path $rootPath -ChildPath out/modules/PSRule.Rules.MSFT.OSS) -Force;
-$here = Join-Path -Path $rootPath -ChildPath 'tests/PSRule.Rules.MSFT.OSS.Tests/';
 
 Describe 'MSFT.OSS' -Tag 'name' {
     $invokeParams = @{
@@ -52,12 +51,20 @@ Describe 'MSFT.OSS' -Tag 'name' {
                 $Null = New-Item -Path $testPath -ItemType Directory -Force;
             }
             $extentionsSlash = @('.cs', '.ts', '.js', '.fs', '.go', '.php', '.cpp', '.h')
-            $extentionsHash = @('.ps1')
+            $extentionsHash = @('.ps1', '.r', '.py', '.rb', '.sh')
+            $extentionsColon = @('.bat', '.cmd')
+            $fileHash = @('Dockerfile')
             foreach ($ext in $extentionsSlash) {
                 $Null = Set-Content -Path (Join-Path -Path $testPath -ChildPath "file$ext") -Value '// An example value';
             }
             foreach ($ext in $extentionsHash) {
                 $Null = Set-Content -Path (Join-Path -Path $testPath -ChildPath "file$ext") -Value '`# An example value';
+            }
+            foreach ($ext in $extentionsColon) {
+                $Null = Set-Content -Path (Join-Path -Path $testPath -ChildPath "file$ext") -Value ':: An example value';
+            }
+            foreach ($ext in $fileHash) {
+                $Null = Set-Content -Path (Join-Path -Path $testPath -ChildPath "$ext") -Value '`# An example value';
             }
 
             # Check rule
@@ -65,7 +72,7 @@ Describe 'MSFT.OSS' -Tag 'name' {
             try {
                 $ruleResult = @(Invoke-PSRule @invokeParams -InputPath $testPath -Name 'MSFT.OSS.License');
                 $ruleResult | Should -Not -BeNullOrEmpty;
-                $ruleResult.Length | Should -Be ($extentionsSlash.Length + $extentionsHash.Length);
+                $ruleResult.Length | Should -Be ($extentionsSlash.Length + $extentionsHash.Length + $extentionsColon.Length + $fileHash.Length);
                 $ruleResult.Outcome | Should -BeIn 'Fail';
             }
             finally {
