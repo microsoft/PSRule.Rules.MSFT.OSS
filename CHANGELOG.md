@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+## v0.1.0
+
+- Initial release.
+
+What's changed since pre-release v0.1.0-B2104002:
+
+- No additional changes.
+
 ## v0.1.0-B2104002 (pre-release)
 
 What's changed since pre-release v0.1.0-B2012007:
