@@ -19,4 +19,4 @@ Consider adding standard license header to code files.
 
 ## LINKS
 
-- [Copyright headers](https://docs.opensource.microsoft.com/content/releasing/copyright-headers.html)
+- [Copyright headers](https://docs.opensource.microsoft.com/releasing/maintain/copyright-headers/)

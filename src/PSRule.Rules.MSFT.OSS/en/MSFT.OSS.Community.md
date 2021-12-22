@@ -19,5 +19,5 @@ Consider adding required files in addition to GitHub community health files.
 
 ## LINKS
 
-- [Releasing projects](https://docs.opensource.microsoft.com/content/releasing/index.html)
-- [Creating a default community health file](https://docs.github.com/en/free-pro-team@latest/github/building-a-strong-community/creating-a-default-community-health-file)
+- [Releasing projects](https://docs.opensource.microsoft.com/releasing/)
+- [Creating a default community health file](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)

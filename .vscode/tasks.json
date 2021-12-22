@@ -56,6 +56,15 @@
             "type": "shell",
             "command": "Invoke-Build BuildRuleDocs",
             "problemMatcher": []
+        },
+        {
+            "type": "PSRule",
+            "problemMatcher": [
+                "$PSRule"
+            ],
+            "inputPath": "${workspaceFolder}",
+            "path": "src/PSRule.Rules.MSFT.OSS/",
+            "label": "PSRule: Run analysis"
         }
     ]
 }
