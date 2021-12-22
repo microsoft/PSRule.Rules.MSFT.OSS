@@ -2,26 +2,28 @@
 # CI pipeline for PSRule.Rules.MSFT.OSS
 
 variables:
-  version: '0.2.0'
+  version: '1.0.0'
   buildConfiguration: 'Release'
   disable.coverage.autogenerate: 'true'
   imageName: 'ubuntu-20.04'
 
- # Use build number format, i.e. 0.2.0-B2107001
+ # Use build number format, i.e. 1.0.0-B2112001
 name: $(version)-B$(date:yyMM)$(rev:rrr)
 
 trigger:
   branches:
     include:
     - 'main'
+    - 'release/*'
   tags:
     include:
-    - 'v0.*'
+    - 'v1.*'
 
 pr:
   branches:
     include:
     - 'main'
+    - 'release/*'
 
 stages:
 
@@ -152,7 +154,7 @@ stages:
 - stage: Release
   displayName: Release
   dependsOn: [ 'Test', 'Analysis' ]
-  condition: and(succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/v0.'))
+  condition: and(succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/v1.'))
   variables:
     # Already run in build stage
     skipComponentGovernanceDetection: 'true'
