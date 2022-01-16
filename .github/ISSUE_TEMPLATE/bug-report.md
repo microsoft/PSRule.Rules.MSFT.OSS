@@ -30,7 +30,7 @@ Capture any error messages and or verbose messages with `-Verbose`.
 **Module in use and version:**
 
 - Module: PSRule.Rules.MSFT.OSS
-- Version: **[e.g. 0.1.0]**
+- Version: **[e.g. 1.0.0]**
 
 Captured output from `$PSVersionTable`:
 
