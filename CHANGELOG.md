@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+What's changed since v1.0.0:
+
+- Bug fixes:
+  - Fixed online documentation links. [#30](https://github.com/microsoft/PSRule.Rules.MSFT.OSS/issues/30)
+
 ## v1.0.0
 
 What's changed since v0.1.0:
