@@ -1,6 +1,6 @@
 ---
 category: Community
-online version: https://github.com/microsoft/PSRule.Rules.MSFT.OSS/blob/main/docs/rules/en/MSFT.OSS.Community.md
+online version: https://github.com/microsoft/PSRule.Rules.MSFT.OSS/blob/main/src/PSRule.Rules.MSFT.OSS/en/MSFT.OSS.Community.md
 ---
 
 # Use recommend community files
