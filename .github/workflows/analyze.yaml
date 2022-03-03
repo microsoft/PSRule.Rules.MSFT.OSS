@@ -25,7 +25,7 @@ jobs:
     steps:
 
     - name: Checkout
-      uses: actions/checkout@v2.4.0
+      uses: actions/checkout@v3
 
     # Run self analysis
     - name: Run PSRule analysis (self)
@@ -43,7 +43,7 @@ jobs:
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v2.4.0
+        uses: actions/checkout@v3
 
       - name: Run DevSkim scanner
         uses: microsoft/DevSkim-Action@v1
