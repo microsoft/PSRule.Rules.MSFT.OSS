@@ -11,10 +11,10 @@ jobs:
     steps:
 
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     # Run analysis against repository
     - name: Run PSRule analysis
-      uses: Microsoft/ps-rule@main
+      uses: Microsoft/ps-rule@v2.0.0
       with:
         modules: 'PSRule.Rules.MSFT.OSS'

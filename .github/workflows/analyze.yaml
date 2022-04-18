@@ -3,10 +3,9 @@
 #
 
 # NOTES:
-# This worflow uses PSRule, CodeQL, and DevSkim.
+# This workflow uses PSRule, and DevSkim.
 # You can read more about these linting tools and configuration options here:
 #   PSRule - https://aka.ms/ps-rule and https://github.com/Microsoft/PSRule.Rules.MSFT.OSS
-#   CodeQL - https://codeql.github.com/docs/codeql-overview/about-codeql/
 #   DevSkim - https://github.com/microsoft/DevSkim-Action and https://github.com/Microsoft/DevSkim
 
 name: Analyze
@@ -17,11 +16,14 @@ on:
     branches: [ main, 'release/*' ]
   schedule:
   - cron: '15 20 * * 0' # At 08:15 PM, on Sunday each week
+  workflow_dispatch:
 
 jobs:
   oss:
     name: Analyze with PSRule
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
 
     - name: Checkout
@@ -29,7 +31,7 @@ jobs:
 
     # Run self analysis
     - name: Run PSRule analysis (self)
-      uses: Microsoft/ps-rule@main
+      uses: Microsoft/ps-rule@v2.0.0
       with:
         source: src/PSRule.Rules.MSFT.OSS/
 

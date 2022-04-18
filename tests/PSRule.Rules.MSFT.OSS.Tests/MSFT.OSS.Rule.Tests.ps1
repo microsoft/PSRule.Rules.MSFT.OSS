@@ -8,24 +8,28 @@
 [CmdletBinding()]
 param ()
 
-# Setup error handling
-$ErrorActionPreference = 'Stop';
-Set-StrictMode -Version latest;
+BeforeAll {
+    # Setup error handling
+    $ErrorActionPreference = 'Stop';
+    Set-StrictMode -Version latest;
 
-if ($Env:SYSTEM_DEBUG -eq 'true') {
-    $VerbosePreference = 'Continue';
+    if ($Env:SYSTEM_DEBUG -eq 'true') {
+        $VerbosePreference = 'Continue';
+    }
+
+    # Setup tests paths
+    $rootPath = $PWD;
+    Import-Module (Join-Path -Path $rootPath -ChildPath out/modules/PSRule.Rules.MSFT.OSS) -Force;
 }
 
-# Setup tests paths
-$rootPath = $PWD;
-Import-Module (Join-Path -Path $rootPath -ChildPath out/modules/PSRule.Rules.MSFT.OSS) -Force;
-
 Describe 'MSFT.OSS' -Tag 'name' {
-    $invokeParams = @{
-        Module = 'PSRule.Rules.MSFT.OSS'
-        WarningAction = 'Ignore'
-        ErrorAction = 'Stop'
-        Format = 'File'
+    BeforeAll {
+        $invokeParams = @{
+            Module = 'PSRule.Rules.MSFT.OSS'
+            WarningAction = 'Ignore'
+            ErrorAction = 'Stop'
+            Format = 'File'
+        }
     }
 
     Context 'MSFT.OSS.Community' {
