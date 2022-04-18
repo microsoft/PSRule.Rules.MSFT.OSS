@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+What's changed since v1.0.1:
+
+- Engineering:
+  - Bump PSRule dependency to v2.0.1. [#35](https://github.com/microsoft/PSRule.Rules.MSFT.OSS/issues/35)
+
 ## v1.0.1
 
 What's changed since v1.0.0:
