@@ -31,7 +31,7 @@ jobs:
 
     # Run self analysis
     - name: Run PSRule analysis (self)
-      uses: Microsoft/ps-rule@v2.0.0
+      uses: Microsoft/ps-rule@v2.0.1
       with:
         source: src/PSRule.Rules.MSFT.OSS/
 
@@ -53,6 +53,6 @@ jobs:
           directory-to-scan: src/
 
       - name: Upload results to security tab
-        uses: github/codeql-action/upload-sarif@v1
+        uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: devskim-results.sarif
