@@ -5,14 +5,15 @@
 What's changed since pre-release v1.1.0-B2204005:
 
 - Engineering:
-  - Bump Pester to v5.3.2. [#37](https://github.com/microsoft/PSRule.Rules.MSFT.OSS/pull/37)
+  - Bump PSRule to v2.1.0. [#40](https://github.com/microsoft/PSRule.Rules.MSFT.OSS/pull/40)
+  - Bump Pester to v5.3.3. [#40](https://github.com/microsoft/PSRule.Rules.MSFT.OSS/pull/40)
 
 ## v1.1.0-B2204005 (pre-release)
 
 What's changed since v1.0.1:
 
 - Engineering:
-  - Bump PSRule to v2.0.1. [#35](https://github.com/microsoft/PSRule.Rules.MSFT.OSS/issues/35)
+  - Bump PSRule to v2.0.1. [#35](https://github.com/microsoft/PSRule.Rules.MSFT.OSS/pull/35)
 
 ## v1.0.1
 
