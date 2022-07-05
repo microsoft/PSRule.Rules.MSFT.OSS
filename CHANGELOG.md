@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+What's changed since pre-release v1.1.0-B2205007:
+
+- Engineering:
+  - Bump PSRule to v2.2.0. [#44](https://github.com/microsoft/PSRule.Rules.MSFT.OSS/pull/44)
+
 ## v1.1.0-B2205007 (pre-release)
 
 What's changed since pre-release v1.1.0-B2204005:
