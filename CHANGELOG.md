@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+What's changed since pre-release v1.1.0-B2207007:
+
+- Engineering:
+  - Bump PSRule to v2.6.0.
+    [#46](https://github.com/microsoft/PSRule.Rules.MSFT.OSS/pull/46)
+  - Bump PSScriptAnalyzer to v1.21.0.
+    [#46](https://github.com/microsoft/PSRule.Rules.MSFT.OSS/pull/46)
+
 ## v1.1.0-B2207007 (pre-release)
 
 What's changed since pre-release v1.1.0-B2205007:
