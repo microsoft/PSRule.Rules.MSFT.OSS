@@ -12,4 +12,4 @@
   - [ ] Unit tests created/ updated
   - [ ] Rule documentation created/ updated
   - [ ] Link to a filed issue
-  - [ ] [Change log](https://github.com/Microsoft/PSRule.Rules.MSFT.OSS/blob/main/CHANGELOG.md) has been updated with change under unreleased section
+  - [ ] [Change log](https://github.com/microsoft/PSRule.Rules.MSFT.OSS/blob/main/CHANGELOG.md) has been updated with change under unreleased section
