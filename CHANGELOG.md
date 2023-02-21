@@ -2,6 +2,22 @@
 
 ## Unreleased
 
+## v1.1.0
+
+What's changed since pre-release v1.0.1:
+
+- Engineering:
+  - Bump PSRule to v2.7.0.
+    [#59](https://github.com/microsoft/PSRule.Rules.MSFT.OSS/pull/59)
+  - Bump Pester to v5.4.0.
+    [#59](https://github.com/microsoft/PSRule.Rules.MSFT.OSS/pull/59)
+  - Bump PSScriptAnalyzer to v1.21.0.
+    [#46](https://github.com/microsoft/PSRule.Rules.MSFT.OSS/pull/46)
+
+What's changed since pre-release v1.1.0-B2301014:
+
+- No additional changes.
+
 ## v1.1.0-B2301014 (pre-release)
 
 What's changed since pre-release v1.1.0-B2207007:
