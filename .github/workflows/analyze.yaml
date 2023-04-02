@@ -31,7 +31,7 @@ jobs:
 
     # Run self analysis
     - name: Run PSRule analysis (self)
-      uses: Microsoft/ps-rule@v2.7.0
+      uses: Microsoft/ps-rule@v2.8.0
       with:
         source: src/PSRule.Rules.MSFT.OSS/
 
