@@ -2,9 +2,15 @@
 
 ## Unreleased
 
+What's changed since release v1.1.0:
+
+- General improvements:
+  - Added `LICENSE.txt` as additional valid file name for license file by @BernieWhite.
+    [#69](https://github.com/microsoft/PSRule.Rules.MSFT.OSS/pull/69)
+
 ## v1.1.0
 
-What's changed since pre-release v1.0.1:
+What's changed since release v1.0.1:
 
 - Engineering:
   - Bump PSRule to v2.7.0.
@@ -50,7 +56,7 @@ What's changed since pre-release v1.1.0-B2204005:
 
 ## v1.1.0-B2204005 (pre-release)
 
-What's changed since v1.0.1:
+What's changed since release v1.0.1:
 
 - Engineering:
   - Bump PSRule to v2.0.1.
@@ -58,7 +64,7 @@ What's changed since v1.0.1:
 
 ## v1.0.1
 
-What's changed since v1.0.0:
+What's changed since release v1.0.0:
 
 - Bug fixes:
   - Fixed online documentation links by @BernieWhite.
@@ -66,7 +72,7 @@ What's changed since v1.0.0:
 
 ## v1.0.0
 
-What's changed since v0.1.0:
+What's changed since release v0.1.0:
 
 - Updated rules:
   - Updated rule documentation links by @BernieWhite.
@@ -81,7 +87,7 @@ What's changed since pre-release v1.0.0-B2112003:
 
 ## v1.0.0-B2112003 (pre-release)
 
-What's changed since v0.1.0:
+What's changed since release v0.1.0:
 
 - Updated rules:
   - Updated rule documentation links by @BernieWhite.
