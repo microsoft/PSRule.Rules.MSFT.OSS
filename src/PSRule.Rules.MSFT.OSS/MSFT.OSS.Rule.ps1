@@ -3,7 +3,7 @@
 
 # Synopsis: Check for recommended community files
 Rule 'MSFT.OSS.Community' -Type 'PSRule.Data.RepositoryInfo' {
-    $Assert.FilePath($TargetObject, 'FullName', @('LICENSE'));
+    $Assert.FilePath($TargetObject, 'FullName', @('LICENSE', 'LICENSE.txt'));
     $Assert.FilePath($TargetObject, 'FullName', @('CODE_OF_CONDUCT.md'));
     $Assert.FilePath($TargetObject, 'FullName', @('CONTRIBUTING.md'));
     $Assert.FilePath($TargetObject, 'FullName', @('SECURITY.md'));
