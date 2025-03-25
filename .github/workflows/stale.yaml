@@ -12,6 +12,8 @@ on:
   schedule:
   - cron: '30 3 * * *' # At 3:30 AM, daily
 
+permissions: {}
+
 jobs:
   stale:
     runs-on: ubuntu-latest
@@ -21,7 +23,7 @@ jobs:
       pull-requests: write
     steps:
 
-    - uses: actions/stale@v9
+    - uses: actions/stale@5bef64f19d7facfb25b37b414482c7164d639639 # v9.1.0
       with:
         stale-issue-message: >
           This issue has been automatically marked as stale because it has not had

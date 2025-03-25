@@ -12,8 +12,18 @@ updates:
 - package-ecosystem: 'github-actions'
   directory: '/'
   schedule:
-    interval: 'daily'
+    interval: daily
   labels:
-  - 'ci-quality'
+  - dependencies
   reviewers:
-  - 'microsoft/psrule-rules-msft-oss'
+  - microsoft/psrule
+
+# Maintain dependencies for Dev Containers
+- package-ecosystem: devcontainers
+  directory: '/'
+  schedule:
+    interval: daily
+  labels:
+  - dependencies
+  reviewers:
+  - microsoft/psrule
