@@ -54,7 +54,7 @@ Some of the documentation that you might like to improve include:
 
 ### Rule recommendations
 
-Before improving rule recommendations familiarize yourself with writing [rule markdown documentation](https://microsoft.github.io/PSRule/scenarios/rule-docs/rule-docs.html#writing-markdown-documentation).
+Before improving rule recommendations familiarize yourself with [Writing rule help](https://microsoft.github.io/PSRule/stable/authoring/writing-rule-help/).
 
 Rule documentation requires the following annotations:
 
@@ -119,4 +119,4 @@ Thank you for taking the time to contribute.
 [github-pr-create]: https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork
 [build]: docs/install-instructions.md#building-from-source
 [vscode]: https://code.visualstudio.com/
-[issues]: https://github.com/Microsoft/PSRule.Rules.MSFT.OSS/issues
+[issues]: https://github.com/microsoft/PSRule/issues

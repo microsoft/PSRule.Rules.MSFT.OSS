@@ -3,25 +3,27 @@
 A suite of rules to validate repositories against Microsoft Open Source Software (OSS) requirements.
 This module is intended to be used by Microsoft repositories, and also serves as a functional example.
 
-[![Open in vscode.dev](https://img.shields.io/badge/Open%20in-vscode.dev-blue)][1]
+> [!NOTE]
+> This module is being migrated into <https://github.com/microsoft/PSRule>
+> and this repository will be archived in the future.
+> _PSRule for Microsoft OSS_ will continue to be installed as a standalone module, however
+> will adopt the same versioning and release cadence as _PSRule_.
+>
+> This repository currently reflects functionality of release v1.1.0.
+> Please log any new issues at <https://github.com/microsoft/PSRule/issues>
+---
 
 ## Support
 
 This project uses GitHub Issues to track bugs and feature requests.
 Please search the existing issues before filing new issues to avoid duplicates.
 
-- For new issues, file your bug or feature request as a new [issue][2].
+- For new issues, file your bug or feature request as a new [issue][5].
 - For help, discussion, and support questions about using this project, join or start a [discussion][3].
-
-If you have any problems with the [PSRule][4] engine,
-please check the project GitHub [issues][5] page instead.
 
 Support for this project/ product is limited to the resources listed above.
 
-  [1]: https://vscode.dev/github/microsoft/PSRule.Rules.MSFT.OSS
-  [2]: https://github.com/microsoft/PSRule.Rules.MSFT.OSS/issues
-  [3]: https://github.com/microsoft/PSRule.Rules.MSFT.OSS/discussions
-  [4]: https://github.com/microsoft/PSRule
+  [3]: https://github.com/microsoft/PSRule/discussions
   [5]: https://github.com/microsoft/PSRule/issues
 
 ## Getting started
@@ -50,11 +52,11 @@ jobs:
     steps:
 
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     # Run analysis against repository
     - name: Run PSRule analysis
-      uses: microsoft/ps-rule@v2.7.0
+      uses: microsoft/ps-rule@v2.9.0
       with:
         modules: 'PSRule.Rules.MSFT.OSS'
         prerelease: true
