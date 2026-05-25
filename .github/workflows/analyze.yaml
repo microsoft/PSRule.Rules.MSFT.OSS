@@ -55,6 +55,6 @@ jobs:
           directory-to-scan: src/
 
       - name: Upload results to security tab
-        uses: github/codeql-action/upload-sarif@fca7ace96b7d713c7035871441bd52efbe39e27e # v3.28.19
+        uses: github/codeql-action/upload-sarif@7211b7c8077ea37d8641b6271f6a365a22a5fbfa # v4.36.0
         with:
           sarif_file: devskim-results.sarif
